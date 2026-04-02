@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/portfolio_rvs.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

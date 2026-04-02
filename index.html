@@ -22,7 +22,13 @@ nav.up{box-shadow:var(--shm)}.logo{font-size:13px;font-weight:500;letter-spacing
 .btn-o{background:transparent;color:var(--t1);border:1px solid var(--bd);box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .btn-o:hover{background:var(--s2);border-color:var(--bds)}
 .btn-s{background:var(--ac);color:#fff;border:1px solid var(--ac)}.btn-s:hover{background:#27272a}
-.hero{min-height:100vh;display:flex;flex-direction:column;padding:56px 2.5rem 0;overflow:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;padding:56px 2.5rem 0;overflow:hidden;position:relative}
+.hero-scroll-hint{flex-shrink:0;display:inline-flex;flex-direction:column;align-items:center;gap:5px;margin:0 auto 1.1rem;padding:4px 8px;text-decoration:none;color:var(--t3);font-size:10.5px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;background:none;border:none;box-shadow:none;transition:color .15s,opacity .15s}
+.hero-scroll-hint:hover{color:var(--t1)}
+.hero-scroll-hint:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:4px}
+.hero-scroll-hint__chevron{display:block;font-size:15px;font-weight:300;line-height:1;opacity:.75;animation:heroHintBob 2.2s ease-in-out infinite}
+@keyframes heroHintBob{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(5px);opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero-scroll-hint__chevron{animation:none}}
 .hero-in{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0}
 .sbadge{display:inline-flex;align-items:center;gap:7px;padding:4px 12px;border-radius:100px;background:var(--s);border:1px solid var(--bd);box-shadow:0 1px 2px rgba(0,0,0,.05);font-size:11.5px;font-weight:400;color:var(--t2);margin-bottom:1.75rem}
 .sdot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.2);animation:breathe 2.5s ease-in-out infinite}
@@ -191,8 +197,8 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <div class="icons-row">
       <button class="iBtn" id="ib-s" onclick="toggle('s')"><div class="iCard iCard--proj"><img src="assets/icons/Project 1.png" alt="Telomeres" width="52" height="52" decoding="async"></div><span class="iLabel">Telomeres</span><div class="iConnector"></div></button>
       <button class="iBtn" id="ib-f" onclick="toggle('f')"><div class="iCard iCard--proj"><img src="assets/icons/Project 2.png" alt="FactWeavers" width="52" height="52" decoding="async"></div><span class="iLabel">FactWeavers</span><div class="iConnector"></div></button>
-      <button class="iBtn" id="ib-p" onclick="toggle('p')"><div class="iCard iCard--proj"><img src="assets/icons/Project 4.png" alt="PAXU" width="52" height="52" decoding="async"></div><span class="iLabel">PAXU</span><div class="iConnector"></div></button>
       <button class="iBtn" id="ib-t" onclick="toggle('t')"><div class="iCard iCard--proj"><img src="assets/icons/Project 3.png" alt="ONETemasek" width="52" height="52" decoding="async"></div><span class="iLabel">ONETemasek</span><div class="iConnector"></div></button>
+      <button class="iBtn" id="ib-p" onclick="toggle('p')"><div class="iCard iCard--proj"><img src="assets/icons/Project 4.png" alt="PAXU" width="52" height="52" decoding="async"></div><span class="iLabel">PAXU</span><div class="iConnector"></div></button>
     </div>
     <div class="pWrap" role="region" aria-label="Selected case studies">
       <div class="panel" id="panel-s">
@@ -325,71 +331,6 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <div class="mgroup" id="metrics-f"></div>
     <button class="btn btn-o" onclick="toggle('f')">Close ↑</button>
   </div>
-</div><div class="panel" id="panel-p">
-  <div class="ph">
-    <div class="ph-l">
-      <div class="pi pi--proj"><img src="assets/icons/Project 4.png" alt="" width="28" height="28" decoding="async"></div>
-      <div><div class="pname">PAXU</div><div class="psub">Anti-Trafficking Safety App — Pacific Links Foundation</div></div>
-    </div>
-    <div class="badges"><span class="badge b-gr">Social Impact</span><span class="badge b-n">UX Designer</span><span class="badge b-gr">2M+ reached</span></div>
-  </div>
-  <div class="ps-problem">
-    <div class="ps-label">The Problem</div>
-    <div class="callout c-gr"><p>Young migrant workers in Vietnam — with limited digital and economic literacy — were falling for false job offers and fake agencies. They had no accessible, localized tool to verify what they were being promised. Knowledge was the missing layer of protection between vulnerability and exploitation.</p></div>
-  </div>
-  <div class="ps-insight">
-    <div class="ps-label">UX Insight &amp; Research Direction</div>
-    <div class="insight-grid"><div class="insight-card">
-  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Design for the Worst Case</span></div>
-  <p>Our users might be reading this app in a high-risk situation, on a slow phone, with little trust in technology. Every interaction had to be legible under stress — no jargon, no confusion, no dead ends.</p>
-</div><div class="insight-card">
-  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Low-End Device Reality</span></div>
-  <p>Usability testing on actual low-end Android devices revealed that common patterns failed: dropdowns were hard to tap, modals confused users, multi-step flows caused abandonment. One task per screen became non-negotiable.</p>
-</div><div class="insight-card">
-  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Abstraction Kills Understanding</span></div>
-  <p>Concepts like 'broker fees' or 'salary comparison' were meaningless to users without economic literacy. Research pointed to culturally anchored metaphors — food prices, local goods — as the only reliable entry point.</p>
-</div><div class="insight-card">
-  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Community as Safety Net</span></div>
-  <p>Users trusted peers more than institutions. Community-validated information — real employer reviews — was more persuasive than official warnings. The platform had to be a community, not just a tool.</p>
-</div></div>
-    <div class="case-carousel" id="case-car-p" role="region" aria-roledescription="carousel" aria-label="PAXU portfolio pages from case study PDF">
-      <div class="case-carousel-viewport">
-        <div class="case-carousel-track"></div>
-        <button type="button" class="case-carousel-btn case-carousel-btn--prev" data-car-prev aria-label="Previous portfolio page">←</button>
-        <button type="button" class="case-carousel-btn case-carousel-btn--next" data-car-next aria-label="Next portfolio page">→</button>
-      </div>
-      <div class="case-carousel-meta">
-        <p class="case-carousel-caption" id="case-car-p-cap"></p>
-        <div class="case-carousel-dots" id="case-car-p-dots"></div>
-        <button type="button" class="case-carousel-full" onclick="openGallery('p')">Open full screen</button>
-      </div>
-    </div>
-  </div>
-  <div class="ps-decisions">
-    <div class="ps-label">Design Decisions</div>
-    <div class="decisions-grid"><div class="dd-card">
-  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="11" height="11" rx="1"/><line x1="4.5" y1="5" x2="10.5" y2="5"/><line x1="4.5" y1="7.5" x2="10.5" y2="7.5"/><line x1="4.5" y1="10" x2="8" y2="10"/></svg></div>
-  <div><div class="dd-name">The Phở Index</div><div class="dd-desc">Wage comparisons translated into bowls of phở — a culturally resonant metric that bypasses economic literacy barriers entirely.</div></div>
-</div><div class="dd-card">
-  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="1" width="7" height="13" rx="1.5"/><circle cx="7.5" cy="11.5" r=".75"/></svg></div>
-  <div><div class="dd-name">Low-Literacy First Design</div><div class="dd-desc">One task per screen. Conversational language. Video instructions. Built for low-end Android with unreliable connectivity.</div></div>
-</div><div class="dd-card">
-  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="5" r="2.5"/><path d="M1 13c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/><circle cx="11" cy="4.5" r="2"/><path d="M13 12c0-1.8-1-3-3-3"/></svg></div>
-  <div><div class="dd-name">Community Intelligence</div><div class="dd-desc">Real employer reviews and localized trafficking alerts turned passive users into active protectors within their communities.</div></div>
-</div><div class="dd-card">
-  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 1.5L2 4v4c0 3 2.5 5.5 5.5 5.5S13 11 13 8V4L7.5 1.5z"/><polyline points="5,7.5 7,9.5 10,6"/></svg></div>
-  <div><div class="dd-name">Zero-Friction Emergency</div><div class="dd-desc">National hotlines, police, and NGO contacts always one tap away — never buried in navigation when seconds count.</div></div>
-</div></div>
-  </div>
-  <div class="ps-il">
-    <div class="il-box"><div class="il-title">Key Insight</div><p>Design for dignity, not just usability. Every interaction was evaluated through one lens: does this feel safe to a frightened, first-time smartphone user with limited trust in technology?</p></div>
-    <div class="il-divider"></div>
-    <div class="il-box"><div class="il-title">Learning</div><p>This project changed what 'good design' means. It's not how it looks or how it works — it's how many people it keeps safe. Design is a tool for dignity, and that responsibility is permanent.</p></div>
-  </div>
-  <div class="pf">
-    <div class="mgroup" id="metrics-p"></div>
-    <button class="btn btn-o" onclick="toggle('p')">Close ↑</button>
-  </div>
 </div><div class="panel" id="panel-t">
   <div class="ph">
     <div class="ph-l">
@@ -455,9 +396,75 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <div class="mgroup" id="metrics-t"></div>
     <button class="btn btn-o" onclick="toggle('t')">Close ↑</button>
   </div>
+</div><div class="panel" id="panel-p">
+  <div class="ph">
+    <div class="ph-l">
+      <div class="pi pi--proj"><img src="assets/icons/Project 4.png" alt="" width="28" height="28" decoding="async"></div>
+      <div><div class="pname">PAXU</div><div class="psub">Anti-Trafficking Safety App — Pacific Links Foundation</div></div>
+    </div>
+    <div class="badges"><span class="badge b-gr">Social Impact</span><span class="badge b-n">UX Designer</span><span class="badge b-gr">2M+ reached</span></div>
+  </div>
+  <div class="ps-problem">
+    <div class="ps-label">The Problem</div>
+    <div class="callout c-gr"><p>Young migrant workers in Vietnam — with limited digital and economic literacy — were falling for false job offers and fake agencies. They had no accessible, localized tool to verify what they were being promised. Knowledge was the missing layer of protection between vulnerability and exploitation.</p></div>
+  </div>
+  <div class="ps-insight">
+    <div class="ps-label">UX Insight &amp; Research Direction</div>
+    <div class="insight-grid"><div class="insight-card">
+  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Design for the Worst Case</span></div>
+  <p>Our users might be reading this app in a high-risk situation, on a slow phone, with little trust in technology. Every interaction had to be legible under stress — no jargon, no confusion, no dead ends.</p>
+</div><div class="insight-card">
+  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Low-End Device Reality</span></div>
+  <p>Usability testing on actual low-end Android devices revealed that common patterns failed: dropdowns were hard to tap, modals confused users, multi-step flows caused abandonment. One task per screen became non-negotiable.</p>
+</div><div class="insight-card">
+  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Abstraction Kills Understanding</span></div>
+  <p>Concepts like 'broker fees' or 'salary comparison' were meaningless to users without economic literacy. Research pointed to culturally anchored metaphors — food prices, local goods — as the only reliable entry point.</p>
+</div><div class="insight-card">
+  <div class="insight-card-title"><div class="pi pi--proj pi--insight" aria-hidden="true"><img src="assets/icons/Project 4.png" alt="" width="22" height="22" decoding="async"></div><span>Community as Safety Net</span></div>
+  <p>Users trusted peers more than institutions. Community-validated information — real employer reviews — was more persuasive than official warnings. The platform had to be a community, not just a tool.</p>
+</div></div>
+    <div class="case-carousel" id="case-car-p" role="region" aria-roledescription="carousel" aria-label="PAXU portfolio pages from case study PDF">
+      <div class="case-carousel-viewport">
+        <div class="case-carousel-track"></div>
+        <button type="button" class="case-carousel-btn case-carousel-btn--prev" data-car-prev aria-label="Previous portfolio page">←</button>
+        <button type="button" class="case-carousel-btn case-carousel-btn--next" data-car-next aria-label="Next portfolio page">→</button>
+      </div>
+      <div class="case-carousel-meta">
+        <p class="case-carousel-caption" id="case-car-p-cap"></p>
+        <div class="case-carousel-dots" id="case-car-p-dots"></div>
+        <button type="button" class="case-carousel-full" onclick="openGallery('p')">Open full screen</button>
+      </div>
+    </div>
+  </div>
+  <div class="ps-decisions">
+    <div class="ps-label">Design Decisions</div>
+    <div class="decisions-grid"><div class="dd-card">
+  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="11" height="11" rx="1"/><line x1="4.5" y1="5" x2="10.5" y2="5"/><line x1="4.5" y1="7.5" x2="10.5" y2="7.5"/><line x1="4.5" y1="10" x2="8" y2="10"/></svg></div>
+  <div><div class="dd-name">The Phở Index</div><div class="dd-desc">Wage comparisons translated into bowls of phở — a culturally resonant metric that bypasses economic literacy barriers entirely.</div></div>
+</div><div class="dd-card">
+  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="1" width="7" height="13" rx="1.5"/><circle cx="7.5" cy="11.5" r=".75"/></svg></div>
+  <div><div class="dd-name">Low-Literacy First Design</div><div class="dd-desc">One task per screen. Conversational language. Video instructions. Built for low-end Android with unreliable connectivity.</div></div>
+</div><div class="dd-card">
+  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="5" r="2.5"/><path d="M1 13c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/><circle cx="11" cy="4.5" r="2"/><path d="M13 12c0-1.8-1-3-3-3"/></svg></div>
+  <div><div class="dd-name">Community Intelligence</div><div class="dd-desc">Real employer reviews and localized trafficking alerts turned passive users into active protectors within their communities.</div></div>
+</div><div class="dd-card">
+  <div class="dd-icon di-gr"><svg viewBox="0 0 15 15" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 1.5L2 4v4c0 3 2.5 5.5 5.5 5.5S13 11 13 8V4L7.5 1.5z"/><polyline points="5,7.5 7,9.5 10,6"/></svg></div>
+  <div><div class="dd-name">Zero-Friction Emergency</div><div class="dd-desc">National hotlines, police, and NGO contacts always one tap away — never buried in navigation when seconds count.</div></div>
+</div></div>
+  </div>
+  <div class="ps-il">
+    <div class="il-box"><div class="il-title">Key Insight</div><p>Design for dignity, not just usability. Every interaction was evaluated through one lens: does this feel safe to a frightened, first-time smartphone user with limited trust in technology?</p></div>
+    <div class="il-divider"></div>
+    <div class="il-box"><div class="il-title">Learning</div><p>This project changed what 'good design' means. It's not how it looks or how it works — it's how many people it keeps safe. Design is a tool for dignity, and that responsibility is permanent.</p></div>
+  </div>
+  <div class="pf">
+    <div class="mgroup" id="metrics-p"></div>
+    <button class="btn btn-o" onclick="toggle('p')">Close ↑</button>
+  </div>
 </div>
     </div>
   </div>
+  <a class="hero-scroll-hint" href="#philosophy" aria-label="Scroll to Design Philosophy and more sections below"><span class="hero-scroll-hint__label">More below</span><span class="hero-scroll-hint__chevron" aria-hidden="true">↓</span></a>
 </section>
 
 <div class="div"></div>
@@ -536,7 +543,7 @@ const METRICS={s:[{v:"60%",l:"Designs user-tested"},{v:"3",l:"Personas served"},
 
 function renderMetrics(pid){const el=document.getElementById("metrics-"+pid);if(el&&!el.dataset.rendered){el.dataset.rendered="1";METRICS[pid].forEach(m=>{el.innerHTML+=`<div><div class="mval"><strong>${m.v}</strong></div><div class="mlabel">${m.l}</div></div>`;});}}
 
-let active=null;const all=["s","f","p","t"];
+let active=null;const all=["s","f","t","p"];
 function toggle(id){if(active===id){document.getElementById("panel-"+id).classList.remove("on");document.getElementById("ib-"+id).classList.remove("on");active=null;return;}all.forEach(i=>{document.getElementById("panel-"+i).classList.remove("on");document.getElementById("ib-"+i).classList.remove("on");});document.getElementById("panel-"+id).classList.add("on");document.getElementById("ib-"+id).classList.add("on");renderMetrics(id);active=id;setTimeout(()=>document.getElementById("panel-"+id).scrollIntoView({behavior:"smooth",block:"nearest"}),50);}
 window.addEventListener("scroll",()=>{document.getElementById("nav").classList.toggle("up",scrollY>8);},{passive:true});
 const rvEls=document.querySelectorAll(".rv");const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");obs.unobserve(e.target);}}),{threshold:.1});rvEls.forEach(el=>obs.observe(el));
