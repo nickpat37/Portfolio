@@ -35,7 +35,8 @@ nav.up{box-shadow:var(--shm)}.logo{font-size:13px;font-weight:500;letter-spacing
 @keyframes breathe{0%,100%{box-shadow:0 0 0 2px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 4px rgba(34,197,94,.12)}}
 .eyebrow{font-size:11px;font-weight:400;letter-spacing:.06em;color:var(--t3);margin-bottom:1.1rem}
 .hero-h{font-size:clamp(2.6rem,5.2vw,4.4rem);font-weight:200;letter-spacing:-.04em;line-height:1.07;color:var(--t1);margin-bottom:1.1rem}
-.hero-h strong{font-weight:400}
+.hero-h .hero-brand{font-weight:500}
+.hero-h em{font-style:italic}
 .hero-p{font-size:15px;font-weight:300;color:var(--t2);line-height:1.65;max-width:400px;margin:0 auto 2.5rem}
 .icons-row{display:flex;align-items:flex-start;justify-content:center;gap:1.75rem;padding:1.5rem 0 0;width:100%}
 .iBtn{display:flex;flex-direction:column;align-items:center;cursor:pointer;border:none;background:none;padding:0;transition:transform .22s cubic-bezier(.34,1.56,.64,1)}
@@ -181,8 +182,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <a class="npill" href="#contact-s">Contact</a>
   </div>
   <div class="nav-r">
-    <a class="btn btn-o" href="assets/resume/resume.pdf">Read CV</a>
-    <a class="btn btn-s" href="mailto:nickpat37@gmail.com">Say hello</a>
+    <a class="btn btn-o" href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
   </div>
 </nav>
 </header>
@@ -192,7 +192,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
   <div class="hero-in">
     <div class="sbadge"><span class="sdot"></span>Open to Jobs and Collaboration</div>
     <p class="eyebrow">UX designer.Product strategist</p>
-    <h1 class="hero-h" id="hero-heading">Design that <strong>solves,</strong><br>not just shows.</h1>
+    <h1 class="hero-h" id="hero-heading"><strong class="hero-brand">Nickpat's Portfolio</strong><br>Design that <em>solves,</em><br>not just shows.</h1>
     <p class="hero-p">Four projects. Four domains. One conviction: the best UX doesn't ask users to adapt — it adapts to them.</p>
     <div class="icons-row">
       <button class="iBtn" id="ib-s" onclick="toggle('s')"><div class="iCard iCard--proj"><img src="assets/icons/Project 1.png" alt="Telomeres" width="52" height="52" decoding="async"></div><span class="iLabel">Telomeres</span><div class="iConnector"></div></button>
