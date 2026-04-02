@@ -7,13 +7,13 @@
 <meta name="description" content="RVS — Senior UX designer portfolio: case studies in environmental intelligence, enterprise products, and product strategy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500&family=Geist+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;900&family=Geist+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#FAFAF9;--s:#FFF;--s2:#F4F4F2;--s3:#ECECEA;--bd:#E4E4E0;--bds:#C9C9C4;--t1:#080807;--t2:#2E2E2C;--t3:#6B6B68;--ac:#18181B;--gd:#8C5E12;--gds:#F5EDD9;--bl:#153D6E;--bls:#EBF2FC;--gr:#134835;--grs:#E8F4EF;--te:#0A5050;--tes:#E6F4F4;--sans:"Geist",ui-sans-serif,system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;--r:8px;--rl:12px;--rxl:16px;--sh:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);--shm:0 4px 8px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.04);--shl:0 10px 20px rgba(0,0,0,.09),0 4px 6px rgba(0,0,0,.05);--shxl:0 20px 32px rgba(0,0,0,.1),0 8px 12px rgba(0,0,0,.05)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:var(--sans);font-weight:300;background:var(--bg);color:var(--t1);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(250,250,249,.92);backdrop-filter:blur(14px) saturate(180%);border-bottom:1px solid var(--bd);transition:box-shadow .2s}
-nav.up{box-shadow:var(--shm)}.logo{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);text-decoration:none}
+nav.up{box-shadow:var(--shm)}.logo{font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);text-decoration:none}
 .nav-mid{position:absolute;left:50%;transform:translateX(-50%);display:flex}
 .npill{padding:5px 14px;font-size:12.5px;font-weight:400;font-family:var(--sans);color:var(--t2);border-radius:100px;transition:all .15s;cursor:pointer;border:none;background:none}
 .npill:hover{background:var(--s2);color:var(--t1)}
@@ -21,6 +21,8 @@ nav.up{box-shadow:var(--shm)}.logo{font-size:13px;font-weight:500;letter-spacing
 .btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:var(--r);font-size:12.5px;font-weight:400;font-family:var(--sans);cursor:pointer;transition:all .15s;text-decoration:none;border:none}
 .btn-o{background:transparent;color:var(--t1);border:1px solid var(--bd);box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .btn-o:hover{background:var(--s2);border-color:var(--bds)}
+nav .nav-r>a.btn-o{background:#000;color:#fff;border-color:#000;box-shadow:none}
+nav .nav-r>a.btn-o:hover{background:#27272a;border-color:#27272a;color:#fff}
 .btn-s{background:var(--ac);color:#fff;border:1px solid var(--ac)}.btn-s:hover{background:#27272a}
 .hero{min-height:100vh;display:flex;flex-direction:column;padding:56px 2.5rem 0;overflow:hidden;position:relative}
 .hero-scroll-hint{flex-shrink:0;display:inline-flex;flex-direction:column;align-items:center;gap:5px;margin:0 auto 1.1rem;padding:4px 8px;text-decoration:none;color:var(--t3);font-size:10.5px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;background:none;border:none;box-shadow:none;transition:color .15s,opacity .15s}
@@ -35,7 +37,8 @@ nav.up{box-shadow:var(--shm)}.logo{font-size:13px;font-weight:500;letter-spacing
 @keyframes breathe{0%,100%{box-shadow:0 0 0 2px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 4px rgba(34,197,94,.12)}}
 .eyebrow{font-size:11px;font-weight:400;letter-spacing:.06em;color:var(--t3);margin-bottom:1.1rem}
 .hero-h{font-size:clamp(2.6rem,5.2vw,4.4rem);font-weight:200;letter-spacing:-.04em;line-height:1.07;color:var(--t1);margin-bottom:1.1rem}
-.hero-h em{font-style:italic}
+.hero-h em{font-style:italic;font-weight:500}
+.hero-h strong{font-weight:500;font-style:italic}
 .hero-p{font-size:15px;font-weight:300;color:var(--t2);line-height:1.65;max-width:400px;margin:0 auto 2.5rem}
 .icons-row{display:flex;align-items:flex-start;justify-content:center;gap:1.75rem;padding:1.5rem 0 0;width:100%}
 .iBtn{display:flex;flex-direction:column;align-items:center;cursor:pointer;border:none;background:none;padding:0;transition:transform .22s cubic-bezier(.34,1.56,.64,1)}
@@ -191,7 +194,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
   <div class="hero-in">
     <div class="sbadge"><span class="sdot"></span>Open to Jobs and Collaboration</div>
     <p class="eyebrow">UX designer.Product strategist</p>
-    <h1 class="hero-h" id="hero-heading">Design that <em>solves,</em><br>not just shows.</h1>
+    <h1 class="hero-h" id="hero-heading">Design that <strong>solves,</strong><br>not just shows.</h1>
     <p class="hero-p">Four projects. Four domains. One conviction: the best UX doesn't ask users to adapt — it adapts to them.</p>
     <div class="icons-row">
       <button class="iBtn" id="ib-s" onclick="toggle('s')"><div class="iCard iCard--proj"><img src="assets/icons/Project 1.png" alt="Telomeres" width="52" height="52" decoding="async"></div><span class="iLabel">Telomeres</span><div class="iConnector"></div></button>
