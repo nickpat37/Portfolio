@@ -23,6 +23,7 @@ nav.up{box-shadow:var(--shm)}.logo{font-size:14px;font-weight:900;letter-spacing
 .btn-o:hover{background:var(--s2);border-color:var(--bds)}
 nav .nav-r>a.btn-o{background:#000;color:#fff;border-color:#000;box-shadow:none}
 nav .nav-r>a.btn-o:hover{background:#27272a;border-color:#27272a;color:#fff}
+nav .nav-r>a.btn[hidden]{display:none!important}
 .btn-s{background:var(--ac);color:#fff;border:1px solid var(--ac)}.btn-s:hover{background:#27272a}
 .hero{min-height:100vh;display:flex;flex-direction:column;padding:56px 2.5rem 0;overflow:hidden;position:relative}
 .hero-scroll-hint{flex-shrink:0;display:inline-flex;flex-direction:column;align-items:center;gap:5px;margin:0 auto 1.1rem;padding:4px 8px;text-decoration:none;color:var(--t3);font-size:10.5px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;background:none;border:none;box-shadow:none;transition:color .15s,opacity .15s}
@@ -156,6 +157,7 @@ nav .nav-r>a.btn-o:hover{background:#27272a;border-color:#27272a;color:#fff}
 .cp{font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:1.75rem}
 .clinks{display:flex;flex-direction:column}
 .clink{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:rgba(255,255,255,.75);font-size:13px;font-weight:300;transition:all .15s}
+.clink[hidden]{display:none!important}
 .clink:hover{color:#fff;padding-left:4px}.cltype{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3)}
 .cr{display:flex;flex-direction:column;gap:10px}
 .ccard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--rl);padding:1.6rem}
@@ -184,7 +186,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <a class="npill" href="#contact-s">Contact</a>
   </div>
   <div class="nav-r">
-    <a class="btn btn-o" href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+    <a class="btn btn-o" href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" hidden>View Resume</a>
   </div>
 </nav>
 </header>
@@ -509,7 +511,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       <div class="clinks">
         <a class="clink" href="mailto:nickpat37@gmail.com"><span class="cltype">Email</span>nickpat37@gmail.com <span style="opacity:.3">↗</span></a>
         <a class="clink" href="https://linkedin.com/in/nickpat/" target="_blank" rel="noopener noreferrer"><span class="cltype">LinkedIn</span>linkedin.com/in/nickpat/ <span style="opacity:.3">↗</span></a>
-        <a class="clink" href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer"><span class="cltype">Résumé</span>resume.pdf <span style="opacity:.3">↗</span></a>
+        <a class="clink" href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" hidden><span class="cltype">Résumé</span>resume.pdf <span style="opacity:.3">↗</span></a>
       </div>
     </div>
     <div class="cr">
