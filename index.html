@@ -51,6 +51,10 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .iBtn.on .iLabel{color:var(--t1);font-weight:500}
 .iConnector{width:1px;height:18px;background:linear-gradient(to bottom,var(--bds),transparent);margin-top:7px;opacity:0;transition:opacity .2s}
 .iBtn.on .iConnector{opacity:1}
+.hero-behance-wrap{display:flex;flex-direction:column;align-items:center;gap:.55rem;margin-top:1.75rem;padding-top:.35rem;text-align:center;width:100%}
+.hero-behance-lead{font-size:15px;font-weight:300;color:rgba(56,56,56,1);letter-spacing:.02em;margin:0;line-height:1.4}
+a.hero-behance-btn{text-decoration:none;background:rgba(9,74,206,1);color:#fff;border-color:rgba(9,74,206,1);font-size:13px;font-weight:500;height:44px;padding:0 36px;border-radius:40px;box-shadow:none}
+a.hero-behance-btn:hover{background:rgba(8,66,185,1);border-color:rgba(8,66,185,1);color:#fff}
 .pWrap{width:100%;padding:0 0 4rem}
 .panel{max-width:900px;margin:0 auto;background:var(--s);border:1px solid var(--bd);border-radius:var(--rxl);box-shadow:var(--shxl);overflow:hidden;display:none;animation:pIn .28s cubic-bezier(.16,1,.3,1)}
 .panel.on{display:block}
@@ -203,6 +207,10 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       <button class="iBtn" id="ib-f" onclick="toggle('f')"><div class="iCard iCard--proj"><img src="assets/icons/Project 2.png" alt="FactWeavers" width="52" height="52" decoding="async"></div><span class="iLabel">FactWeavers</span><div class="iConnector"></div></button>
       <button class="iBtn" id="ib-t" onclick="toggle('t')"><div class="iCard iCard--proj"><img src="assets/icons/Project 3.png" alt="ONETemasek" width="52" height="52" decoding="async"></div><span class="iLabel">ONETemasek</span><div class="iConnector"></div></button>
       <button class="iBtn" id="ib-p" onclick="toggle('p')"><div class="iCard iCard--proj"><img src="assets/icons/Project 4.png" alt="PAXU" width="52" height="52" decoding="async"></div><span class="iLabel">PAXU</span><div class="iConnector"></div></button>
+    </div>
+    <div class="hero-behance-wrap">
+      <p class="hero-behance-lead">Or visit</p>
+      <a class="btn btn-o hero-behance-btn" href="https://www.behance.net/nickpat37" target="_blank" rel="noopener noreferrer">Behance portfolio</a>
     </div>
     <div class="pWrap" role="region" aria-label="Selected case studies">
       <div class="panel" id="panel-s">
@@ -511,6 +519,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       <div class="clinks">
         <a class="clink" href="mailto:nickpat37@gmail.com"><span class="cltype">Email</span>nickpat37@gmail.com <span style="opacity:.3">↗</span></a>
         <a class="clink" href="https://linkedin.com/in/nickpat/" target="_blank" rel="noopener noreferrer"><span class="cltype">LinkedIn</span>linkedin.com/in/nickpat/ <span style="opacity:.3">↗</span></a>
+        <a class="clink" href="https://www.behance.net/nickpat37" target="_blank" rel="noopener noreferrer"><span class="cltype">Behance</span>behance.net/nickpat37 <span style="opacity:.3">↗</span></a>
         <a class="clink" href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" hidden><span class="cltype">Résumé</span>resume.pdf <span style="opacity:.3">↗</span></a>
       </div>
     </div>
