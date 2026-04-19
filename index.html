@@ -22,7 +22,8 @@ nav.case-mode .nav-avail{display:none!important}
 .nav-case-close{display:none;width:36px;height:36px;border-radius:var(--r);align-items:center;justify-content:center;border:1px solid var(--bd);background:var(--s);cursor:pointer;color:var(--t2);font-family:var(--sans);font-size:18px;line-height:1;transition:background .15s;flex-shrink:0}
 .nav-case-close:hover{background:var(--s2)}
 nav.case-mode .nav-case-close{display:inline-flex!important}
-.nav-project .ph.ph--nav,.nav-project .ph{background:transparent;border:none;padding:0;margin:0;box-shadow:none;width:100%;min-height:0;align-items:center}
+.nav-project .ph{background:transparent;border:none;padding:0;margin:0;box-shadow:none;width:100%;min-height:0;align-items:center}
+.nav-project .ph.ph--nav{padding-right:16px}
 .nav-project .ph .pname{font-size:14px}
 .nav-project .ph .psub{font-size:11px;max-width:min(360px,40vw);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nav-project .ph .badges{flex-shrink:1;gap:4px}
@@ -73,7 +74,10 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .iCard{width:74px;height:74px;border-radius:var(--rxl);display:flex;align-items:center;justify-content:center;box-shadow:var(--shm);border:none;transition:box-shadow .2s;overflow:hidden}
 .iBtn:hover .iCard,.iBtn.on .iCard{box-shadow:var(--shxl)}
 .iCard--proj{background:var(--s)}.iCard--proj img{width:52px;height:52px;object-fit:contain;display:block}
-.iLabel{margin-top:9px;font-size:11px;font-weight:400;color:var(--t2);white-space:nowrap}
+.iCard.iCard--brand{padding:0;overflow:hidden}
+.iCard.iCard--brand img{width:100%;height:100%;object-fit:cover;display:block}
+.iLabel{margin-top:9px;font-size:11px;font-weight:400;color:var(--t2);white-space:nowrap;max-width:104px;line-height:1.25;text-align:center}
+.iBtn .iLabel{white-space:normal}
 .iBtn.on .iLabel{color:var(--t1);font-weight:500}
 .iConnector{width:1px;height:18px;background:linear-gradient(to bottom,var(--bds),transparent);margin-top:7px;opacity:0;transition:opacity .2s}
 .iBtn.on .iConnector{opacity:1}
@@ -84,7 +88,12 @@ a.hero-behance-btn:hover{background:rgba(8,66,185,1);border-color:rgba(8,66,185,
 .pWrap{width:100%;padding:0}
 .panel{max-width:900px;margin:0 auto;background:transparent;border:none;border-radius:0;box-shadow:none;overflow:visible;display:none;flex-direction:column;gap:1rem;animation:pIn .28s cubic-bezier(.16,1,.3,1)}
 .panel.on{display:flex}
-.panel-seg{background:var(--s);border:1px solid var(--bd);border-radius:var(--rxl);box-shadow:var(--shxl);overflow:hidden}
+.panel--brand{max-width:720px}
+.panel--brand .pi--brand{border-radius:10px;overflow:hidden;padding:0}
+.panel--brand .pi--brand img{width:100%;height:100%;object-fit:cover;max-width:none;max-height:none}
+.brand-showcase{display:flex;flex-direction:column;gap:1rem;padding:0 1.25rem 1.75rem}
+.brand-showcase img{width:100%;height:auto;display:block;border-radius:var(--r);box-shadow:var(--shl)}
+.panel-seg{background:unset;border:none;border-image:none;box-shadow:none;border-radius:var(--rxl);overflow:hidden}
 .panel-seg--carousel{background:transparent;border:none;box-shadow:none;border-radius:0;overflow:visible;padding:0}
 .panel-seg .ph{border-bottom:1px solid var(--bd)}
 .ps-insight-intro{padding:1.6rem 2rem}
@@ -627,6 +636,58 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
   </div>
   </div>
 </div>
+<div class="panel panel--brand" id="panel-b5">
+  <div class="panel-seg">
+    <div class="ph">
+      <div class="ph-l">
+        <div class="pi pi--brand"><img src="assets/images/Project 5_01.jpg" alt="" width="42" height="42" decoding="async"></div>
+        <div><div class="pname">Sir Larry in financalland</div><div class="psub">Branding</div></div>
+      </div>
+      <div class="badges"><span class="badge b-n">Branding strategist</span></div>
+    </div>
+    <div class="brand-showcase" id="brand-showcase-b5" role="region" aria-label="Sir Larry in financalland — portfolio images"></div>
+    <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('p')">Close ↑</button></div>
+  </div>
+</div>
+<div class="panel panel--brand" id="panel-b6">
+  <div class="panel-seg">
+    <div class="ph">
+      <div class="ph-l">
+        <div class="pi pi--brand"><img src="assets/images/Project 6_01.png" alt="" width="42" height="42" decoding="async"></div>
+        <div><div class="pname">Weather drink</div><div class="psub">Branding</div></div>
+      </div>
+      <div class="badges"><span class="badge b-n">Branding strategist</span></div>
+    </div>
+    <div class="brand-showcase" id="brand-showcase-b6" role="region" aria-label="Weather drink — portfolio images"></div>
+    <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('t')">Close ↑</button></div>
+  </div>
+</div>
+<div class="panel panel--brand" id="panel-b7">
+  <div class="panel-seg">
+    <div class="ph">
+      <div class="ph-l">
+        <div class="pi pi--brand"><img src="assets/images/Project 7_02.jpg" alt="" width="42" height="42" decoding="async"></div>
+        <div><div class="pname">Chinese theatre circle</div><div class="psub">Branding</div></div>
+      </div>
+      <div class="badges"><span class="badge b-n">Branding strategist</span></div>
+    </div>
+    <div class="brand-showcase" id="brand-showcase-b7" role="region" aria-label="Chinese theatre circle — portfolio images"></div>
+    <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('f')">Close ↑</button></div>
+  </div>
+</div>
+<div class="panel panel--brand" id="panel-b8">
+  <div class="panel-seg">
+    <div class="ph">
+      <div class="ph-l">
+        <div class="pi pi--brand"><img src="assets/images/Project 8_02.jpg" alt="" width="42" height="42" decoding="async"></div>
+        <div><div class="pname">Chevalerie</div><div class="psub">Branding</div></div>
+      </div>
+      <div class="badges"><span class="badge b-n">Branding strategist</span></div>
+    </div>
+    <div class="brand-showcase" id="brand-showcase-b8" role="region" aria-label="Chevalerie — portfolio images"></div>
+    <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('s')">Close ↑</button></div>
+  </div>
+</div>
     </div>
     </div>
   </div>
@@ -652,15 +713,16 @@ const METRICS={s:[{v:"60%",l:"Designs user-tested"},{v:"3",l:"Personas served"},
 
 function renderMetrics(pid){const el=document.getElementById("metrics-"+pid);if(el&&!el.dataset.rendered){el.dataset.rendered="1";METRICS[pid].forEach(m=>{el.innerHTML+=`<div><div class="mval"><strong>${m.v}</strong></div><div class="mlabel">${m.l}</div></div>`;});}}
 
-let active=null;const all=["s","f","t","p"];
+let active=null;const all=["s","f","t","p"];const ALL_PANEL_IDS=["s","f","t","p","b5","b6","b7","b8"];let heroRole="ux";
 let phRestoreParent=null,phRestoreNext=null;
+function getPanelId(heroId){if(heroRole==="brand"){const m={p:"b5",t:"b6",f:"b7",s:"b8"};return m[heroId]||heroId;}return heroId;}
 function syncCaseTopPad(){const h=document.getElementById("nav")?.offsetHeight||56;document.documentElement.style.setProperty("--case-top-pad",h+"px");}
 function unmountPhFromNav(){const slot=document.getElementById("nav-project");const ph=slot&&slot.querySelector(".ph");if(ph&&phRestoreParent){ph.classList.remove("ph--nav");phRestoreParent.insertBefore(ph,phRestoreNext)}phRestoreParent=null;phRestoreNext=null;if(slot){slot.innerHTML="";slot.hidden=true}document.getElementById("nav").classList.remove("case-mode");document.body.classList.remove("case-study-open");document.documentElement.style.removeProperty("--case-top-pad");const nb=document.getElementById("nav-case-close");if(nb)nb.hidden=true;}
-function mountPhToNav(id){unmountPhFromNav();const panel=document.getElementById("panel-"+id);const ph=panel&&panel.querySelector(".ph");const slot=document.getElementById("nav-project");if(!ph||!slot)return;phRestoreParent=ph.parentNode;phRestoreNext=ph.nextSibling;ph.classList.add("ph--nav");slot.appendChild(ph);slot.hidden=false;document.getElementById("nav").classList.add("case-mode");document.body.classList.add("case-study-open");const nb=document.getElementById("nav-case-close");if(nb)nb.hidden=false;requestAnimationFrame(()=>{syncCaseTopPad();});}
+function mountPhToNav(heroId){unmountPhFromNav();const pid=getPanelId(heroId);const panel=document.getElementById("panel-"+pid);const ph=panel&&panel.querySelector(".ph");const slot=document.getElementById("nav-project");if(!ph||!slot)return;phRestoreParent=ph.parentNode;phRestoreNext=ph.nextSibling;ph.classList.add("ph--nav");slot.appendChild(ph);slot.hidden=false;document.getElementById("nav").classList.add("case-mode");document.body.classList.add("case-study-open");const nb=document.getElementById("nav-case-close");if(nb)nb.hidden=false;requestAnimationFrame(()=>{syncCaseTopPad();});}
 function openCaseOverlay(){const ov=document.getElementById("case-overlay");ov.classList.add("open");ov.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";}
-function closeCaseOverlay(){unmountPhFromNav();const ov=document.getElementById("case-overlay");ov.classList.remove("open");ov.setAttribute("aria-hidden","true");document.body.style.overflow="";all.forEach(i=>{document.getElementById("panel-"+i).classList.remove("on");document.getElementById("ib-"+i).classList.remove("on");});active=null;}
+function closeCaseOverlay(){unmountPhFromNav();const ov=document.getElementById("case-overlay");ov.classList.remove("open");ov.setAttribute("aria-hidden","true");document.body.style.overflow="";ALL_PANEL_IDS.forEach(pid=>{const el=document.getElementById("panel-"+pid);if(el)el.classList.remove("on");});all.forEach(i=>{const ib=document.getElementById("ib-"+i);if(ib)ib.classList.remove("on");});active=null;}
 window.addEventListener("resize",()=>{if(document.body.classList.contains("case-study-open"))syncCaseTopPad();},{passive:true});
-function toggle(id){const ov=document.getElementById("case-overlay");const open=ov.classList.contains("open");if(open&&active===id){closeCaseOverlay();return;}if(!open)openCaseOverlay();all.forEach(i=>{document.getElementById("panel-"+i).classList.remove("on");document.getElementById("ib-"+i).classList.remove("on");});document.getElementById("panel-"+id).classList.add("on");document.getElementById("ib-"+id).classList.add("on");renderMetrics(id);active=id;mountPhToNav(id);const sc=document.getElementById("case-overlay-scroll");if(sc)sc.scrollTop=0;}
+function toggle(id){const ov=document.getElementById("case-overlay");const open=ov.classList.contains("open");if(open&&active===id){closeCaseOverlay();return;}if(!open)openCaseOverlay();const pid=getPanelId(id);all.forEach(i=>{const p=document.getElementById("panel-"+getPanelId(i));if(p)p.classList.remove("on");document.getElementById("ib-"+i).classList.remove("on");});document.getElementById("panel-"+pid).classList.add("on");document.getElementById("ib-"+id).classList.add("on");if(heroRole!=="brand")renderMetrics(id);active=id;mountPhToNav(id);const sc=document.getElementById("case-overlay-scroll");if(sc)sc.scrollTop=0;}
 document.getElementById("nav-case-close").addEventListener("click",closeCaseOverlay);
 window.addEventListener("scroll",()=>{document.getElementById("nav").classList.toggle("up",scrollY>8);},{passive:true});
 const rvEls=document.querySelectorAll(".rv");const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");obs.unobserve(e.target);}}),{threshold:.1});rvEls.forEach(el=>obs.observe(el));
@@ -695,6 +757,15 @@ const GALLERY={
     {src:'assets/images/Project 3_05.jpg'}
   ],
 };
+const BRAND_STACKS={
+b5:["assets/images/Project 5_01.jpg","assets/images/Project 5_02.jpg","assets/images/Project 5_03.gif","assets/images/Project 5_04.jpg","assets/images/Project 5_05.jpg","assets/images/Project 5_06.gif"],
+b6:["assets/images/Project 6_01.png","assets/images/Project 6_02.png","assets/images/Project 6_03.png","assets/images/Project 6_04.png","assets/images/Project 6_05.png","assets/images/Project 6_06.png","assets/images/Project 6_07.png","assets/images/Project 6_08.png","assets/images/Project 6_09.png","assets/images/Project 6_010.png","assets/images/Project 6_011.png","assets/images/Project 6_012.png","assets/images/Project 6_013.png","assets/images/Project 6_014.png"],
+b7:["assets/images/Project 7_02.jpg","assets/images/Project 7_03.jpg","assets/images/Project 7_04.jpg","assets/images/Project 7_05.jpg","assets/images/Project 7_06.jpg","assets/images/Project 7_07.jpg","assets/images/Project 7_08.jpg","assets/images/Project 7_09.jpg","assets/images/Project 7_010.gif","assets/images/Project 7_011.jpg","assets/images/Project 7_012.gif","assets/images/Project 7_013.jpg","assets/images/Project 7_014.jpg","assets/images/Project 7_015.gif","assets/images/Project 7_016.jpg","assets/images/Project 7_017.jpg","assets/images/Project 7_018.jpg"],
+b8:["assets/images/Project 8_02.jpg","assets/images/Project 8_03.jpg","assets/images/Project 8_04.jpg","assets/images/Project 8_05.jpg","assets/images/Project 8_06.gif","assets/images/Project 8_07.jpg","assets/images/Project 8_08.gif","assets/images/Project 8_09.jpg","assets/images/Project 8_010.jpg"]
+};
+const BRAND_ALT={b5:"Sir Larry in financalland",b6:"Weather drink",b7:"Chinese theatre circle",b8:"Chevalerie"};
+function initBrandShowcases(){Object.keys(BRAND_STACKS).forEach(key=>{const el=document.getElementById("brand-showcase-"+key);if(!el||el.dataset.ready)return;const base=BRAND_ALT[key]||"Portfolio";BRAND_STACKS[key].forEach((src,i)=>{const img=document.createElement("img");img.src=src;img.alt=base+" — "+(i+1);img.loading=i===0?"eager":"lazy";img.decoding="async";el.appendChild(img);});el.dataset.ready="1";});}
+initBrandShowcases();
 
 function initCaseCarousel(rootId,pid){
   const root=document.getElementById(rootId);
@@ -791,12 +862,14 @@ function renderGallery(){const item=gData[gIdx];document.getElementById("modal-i
 function navGallery(dir){gIdx=Math.max(0,Math.min(gData.length-1,gIdx+dir));renderGallery();}
 document.getElementById("modal").addEventListener("click",function(e){if(e.target===this)closeGallery();});
 document.addEventListener("keydown",e=>{if(document.getElementById("modal").classList.contains("open")){if(e.key==="ArrowRight")navGallery(1);if(e.key==="ArrowLeft")navGallery(-1);if(e.key==="Escape")closeGallery();return;}if(document.getElementById("case-overlay").classList.contains("open")&&e.key==="Escape")closeCaseOverlay();});
+const UX_HERO_THUMB={s:"assets/icons/Project 1.png",f:"assets/icons/Project 2.png",t:"assets/icons/Project 3.png",p:"assets/icons/Project 4.png"};
 const HERO_BY_ROLE={
 ux:{title:'Design that <strong>solves,</strong><br>not just shows.',sub:"Research, systems, and interaction design",p:"Four projects. Four domains. One conviction: the best UX doesn't ask users to adapt, it adapts to them.",order:["s","f","t","p"],labels:{s:"Telomeres",f:"FactWeavers",t:"ONETemasek",p:"PAXU"}},
-brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"From environmental intelligence to consumer finance — surfaces that read instantly in regulated rooms and crowded feeds.",order:["p","t","f","s"],labels:{s:"Telomeres",f:"FactWeavers",t:"ONETemasek",p:"PAXU"}},
+brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"Four branding projects — open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Weather drink",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}},
 ctx:{title:'Systems that <strong>carry context,</strong><br>not just content.',sub:"Knowledge design, prompts, and product surfaces",p:"Grounding complex domains so teams — and models — reason with the right evidence, constraints, and mental models.",order:["f","t","s","p"],labels:{s:"Telomeres · geo context",f:"FactWeavers · truth layer",t:"ONETemasek · AI rollout",p:"PAXU · investor UX"}}
 };
 function applyHeroRole(role){
+heroRole=role||"ux";
 const d=HERO_BY_ROLE[role];if(!d)return;
 const h=document.getElementById("hero-heading"),sub=document.getElementById("hero-sub"),lead=document.getElementById("hero-lead"),row=document.querySelector(".icons-row");
 if(!h||!lead||!row)return;
@@ -806,10 +879,15 @@ lead.textContent=d.p;
 d.order.forEach(id=>{
 const b=document.getElementById("ib-"+id);if(b)row.appendChild(b);
 const lbl=d.labels&&d.labels[id];
-if(b&&lbl){const span=b.querySelector(".iLabel");if(span)span.textContent=lbl;const img=b.querySelector(".iCard img");if(img)img.alt=lbl.replace(/\s·\s.*$/,"");}
+if(!b||!lbl)return;
+const span=b.querySelector(".iLabel");if(span)span.textContent=lbl;
+const img=b.querySelector(".iCard img"),card=b.querySelector(".iCard");
+if(img)img.alt=(lbl.split("·")[0]||lbl).trim();
+if(role==="brand"&&d.thumbs&&d.thumbs[id]){if(card)card.classList.add("iCard--brand");if(img)img.src=d.thumbs[id];}
+else{if(card)card.classList.remove("iCard--brand");if(img)img.src=UX_HERO_THUMB[id];}
 });
 }
-document.querySelectorAll(".role-tab").forEach((btn,_,arr)=>{btn.addEventListener("click",()=>{const role=btn.getAttribute("data-role");if(!role)return;arr.forEach(b=>{b.classList.toggle("on",b===btn);b.setAttribute("aria-selected",b===btn?"true":"false");});applyHeroRole(role);});});
+document.querySelectorAll(".role-tab").forEach((btn,_,arr)=>{btn.addEventListener("click",()=>{const role=btn.getAttribute("data-role");if(!role)return;arr.forEach(b=>{b.classList.toggle("on",b===btn);b.setAttribute("aria-selected",b===btn?"true":"false");});if(document.getElementById("case-overlay").classList.contains("open"))closeCaseOverlay();applyHeroRole(role);});});
 applyHeroRole("ux");
 </script>
 </body>
