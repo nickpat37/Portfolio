@@ -124,15 +124,16 @@ a.hero-behance-btn:hover{background:rgba(8,66,185,1);border-color:rgba(8,66,185,
 .case-carousel{margin-top:.85rem;width:100%;max-width:100%;box-sizing:border-box;border:1px solid var(--bd);border-radius:var(--r);background:var(--s);overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .panel-seg--carousel .case-carousel{margin-top:0;border:none;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
 .panel-seg--carousel .case-carousel-viewport{background:transparent}
-.panel-seg--carousel .case-carousel-meta{border-top:none;padding:.65rem 0 0}
+.panel-seg--carousel .case-carousel-meta{border-top:none;padding:0 1rem .4rem;height:47px;justify-content:flex-end;flex-shrink:0}
+.case-carousel-stage{position:relative;width:100%}
 .case-carousel-viewport{position:relative;background:var(--s2)}
 .case-carousel-viewport--hz{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain;scrollbar-width:thin;width:100%}
 .case-carousel-viewport--hz::-webkit-scrollbar{height:6px}
 .case-carousel-viewport--hz::-webkit-scrollbar-thumb{background:var(--bds);border-radius:3px}
-.case-carousel-track{display:flex;flex-direction:row;width:max-content;min-height:min(52vh,500px)}
-.case-carousel-slide{flex:0 0 auto;scroll-snap-align:start;scroll-snap-stop:always;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:1rem 1.25rem;min-height:220px;max-height:min(52vh,500px)}
-.case-carousel-slide img{max-width:100%;max-height:min(48vh,460px);width:auto;height:auto;object-fit:contain;border-radius:var(--r);box-shadow:var(--shl)}
-.case-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:var(--r);border:1px solid var(--bd);background:var(--s);cursor:pointer;color:var(--t1);font-size:15px;font-family:var(--sans);display:flex;align-items:center;justify-content:center;transition:background .15s;z-index:2;line-height:1}
+.case-carousel-track{display:flex;flex-direction:row;width:max-content;min-height:560px}
+.case-carousel-slide{flex:0 0 auto;scroll-snap-align:start;scroll-snap-stop:always;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:1rem 1.25rem;min-height:220px;height:560px;max-height:560px}
+.case-carousel-slide img{max-width:100%;width:auto;height:100%;max-height:100%;object-fit:contain;border-radius:var(--r);box-shadow:none}
+.case-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:var(--r);border:1px solid var(--bd);background:var(--s);cursor:pointer;color:var(--t1);font-size:15px;font-family:var(--sans);display:flex;align-items:center;justify-content:center;transition:background .15s;z-index:3;line-height:1}
 .case-carousel-btn:hover:not(:disabled){background:var(--s2)}
 .case-carousel-btn:disabled{opacity:.32;cursor:default}
 .case-carousel-btn--prev{left:10px}
@@ -365,8 +366,10 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
   </div>
   <div class="panel-seg panel-seg--carousel">
     <div class="case-carousel" id="case-car-s" role="region" aria-roledescription="carousel" aria-label="Telomeres portfolio pages from case study PDF">
-      <div class="case-carousel-viewport case-carousel-viewport--hz">
-        <div class="case-carousel-track"></div>
+      <div class="case-carousel-stage">
+        <div class="case-carousel-viewport case-carousel-viewport--hz">
+          <div class="case-carousel-track"></div>
+        </div>
         <button type="button" class="case-carousel-btn case-carousel-btn--prev" data-car-prev aria-label="Previous image">←</button>
         <button type="button" class="case-carousel-btn case-carousel-btn--next" data-car-next aria-label="Next image">→</button>
       </div>
@@ -436,8 +439,10 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
   </div>
   <div class="panel-seg panel-seg--carousel">
     <div class="case-carousel" id="case-car-f" role="region" aria-roledescription="carousel" aria-label="FactWeavers portfolio pages from case study PDF">
-      <div class="case-carousel-viewport case-carousel-viewport--hz">
-        <div class="case-carousel-track"></div>
+      <div class="case-carousel-stage">
+        <div class="case-carousel-viewport case-carousel-viewport--hz">
+          <div class="case-carousel-track"></div>
+        </div>
         <button type="button" class="case-carousel-btn case-carousel-btn--prev" data-car-prev aria-label="Previous image">←</button>
         <button type="button" class="case-carousel-btn case-carousel-btn--next" data-car-next aria-label="Next image">→</button>
       </div>
@@ -507,8 +512,10 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
   </div>
   <div class="panel-seg panel-seg--carousel">
     <div class="case-carousel" id="case-car-t" role="region" aria-roledescription="carousel" aria-label="ONETemasek portfolio pages from case study PDF">
-      <div class="case-carousel-viewport case-carousel-viewport--hz">
-        <div class="case-carousel-track"></div>
+      <div class="case-carousel-stage">
+        <div class="case-carousel-viewport case-carousel-viewport--hz">
+          <div class="case-carousel-track"></div>
+        </div>
         <button type="button" class="case-carousel-btn case-carousel-btn--prev" data-car-prev aria-label="Previous image">←</button>
         <button type="button" class="case-carousel-btn case-carousel-btn--next" data-car-next aria-label="Next image">→</button>
       </div>
@@ -578,8 +585,10 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
   </div>
   <div class="panel-seg panel-seg--carousel">
     <div class="case-carousel" id="case-car-p" role="region" aria-roledescription="carousel" aria-label="PAXU portfolio pages from case study PDF">
-      <div class="case-carousel-viewport case-carousel-viewport--hz">
-        <div class="case-carousel-track"></div>
+      <div class="case-carousel-stage">
+        <div class="case-carousel-viewport case-carousel-viewport--hz">
+          <div class="case-carousel-track"></div>
+        </div>
         <button type="button" class="case-carousel-btn case-carousel-btn--prev" data-car-prev aria-label="Previous image">←</button>
         <button type="button" class="case-carousel-btn case-carousel-btn--next" data-car-next aria-label="Next image">→</button>
       </div>
