@@ -53,7 +53,7 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .hero-scroll-hint__chevron{display:block;font-size:15px;font-weight:300;line-height:1;opacity:.75;animation:heroHintBob 2.2s ease-in-out infinite}
 @keyframes heroHintBob{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(5px);opacity:1}}
 @media (prefers-reduced-motion:reduce){.hero-scroll-hint__chevron{animation:none}}
-.hero-in{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 0}
+.hero-in{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:100px 0 32px 0}
 .sdot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.2);animation:breathe 2.5s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 2px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 4px rgba(34,197,94,.12)}}
 .eyebrow{font-size:11px;font-weight:400;letter-spacing:.06em;color:var(--t3);margin-bottom:1.1rem}
@@ -62,12 +62,14 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .role-tab:hover{color:var(--t1);background:rgba(0,0,0,.05)}
 .role-tab.on{background:var(--t1);color:#fff}
 .role-tab:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+#role-tab-ux,#role-tab-brand{width:140px}
 .hero-h{font-size:clamp(2.6rem,5.2vw,4.4rem);font-weight:200;letter-spacing:-.04em;line-height:1.07;color:var(--t1);margin-bottom:1.1rem}
 .hero-h em{font-style:italic;font-weight:500}
 .hero-h strong{font-weight:500;font-style:italic}
 .hero-sub{font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin:-0.25rem auto .95rem;max-width:460px;line-height:1.45}
 .hero-sub[hidden]{display:none!important}
-.hero-p{font-size:15px;font-weight:300;color:var(--t2);line-height:1.65;max-width:460px;margin:0 auto 2.5rem}
+.hero-p{font-size:15px;font-weight:300;color:var(--t2);line-height:1.65;width:100%;max-width:100%;align-self:stretch;margin:0 auto 2.5rem}
+#hero-lead{width:500px;max-width:100%;align-self:center}
 .icons-row{display:flex;align-items:flex-start;justify-content:center;gap:1.75rem;padding:1.5rem 0 0;width:100%}
 .iBtn{display:flex;flex-direction:column;align-items:center;cursor:pointer;border:none;background:none;padding:0;transition:transform .22s cubic-bezier(.34,1.56,.64,1)}
 .iBtn:hover{transform:translateY(-4px)}.iBtn.on{transform:translateY(-5px)}
@@ -81,10 +83,6 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .iBtn.on .iLabel{color:var(--t1);font-weight:500}
 .iConnector{width:1px;height:18px;background:linear-gradient(to bottom,var(--bds),transparent);margin-top:7px;opacity:0;transition:opacity .2s}
 .iBtn.on .iConnector{opacity:1}
-.hero-behance-wrap{display:flex;flex-direction:column;align-items:center;gap:.55rem;margin-top:1.75rem;padding-top:.35rem;text-align:center;width:100%}
-.hero-behance-lead{font-size:15px;font-weight:300;color:rgba(56,56,56,1);letter-spacing:.02em;margin:0;line-height:1.4}
-a.hero-behance-btn{text-decoration:none;background:rgba(9,74,206,1);color:#fff;border-color:rgba(9,74,206,1);font-size:13px;font-weight:500;height:44px;padding:0 36px;border-radius:40px;box-shadow:none}
-a.hero-behance-btn:hover{background:rgba(8,66,185,1);border-color:rgba(8,66,185,1);color:#fff}
 .pWrap{width:100%;padding:0}
 .panel{max-width:900px;margin:0 auto;background:transparent;border:none;border-radius:0;box-shadow:none;overflow:visible;display:none;flex-direction:column;gap:1rem;animation:pIn .28s cubic-bezier(.16,1,.3,1)}
 .panel.on{display:flex}
@@ -261,7 +259,6 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <div class="role-tabs" role="tablist" aria-label="Focus areas">
       <button type="button" class="role-tab on" role="tab" aria-selected="true" id="role-tab-ux" data-role="ux">UX design</button>
       <button type="button" class="role-tab" role="tab" aria-selected="false" id="role-tab-brand" data-role="brand">Branding strategist</button>
-      <button type="button" class="role-tab" role="tab" aria-selected="false" id="role-tab-ctx" data-role="ctx">Context engineering</button>
     </div>
     <h1 class="hero-h" id="hero-heading">Design that <strong>solves,</strong><br>not just shows.</h1>
     <p class="hero-sub" id="hero-sub" hidden></p>
@@ -272,11 +269,6 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       <button class="iBtn" id="ib-t" onclick="toggle('t')"><div class="iCard iCard--proj"><img src="assets/icons/Project 3.png" alt="ONETemasek" width="52" height="52" decoding="async"></div><span class="iLabel">ONETemasek</span><div class="iConnector"></div></button>
       <button class="iBtn" id="ib-p" onclick="toggle('p')"><div class="iCard iCard--proj"><img src="assets/icons/Project 4.png" alt="PAXU" width="52" height="52" decoding="async"></div><span class="iLabel">PAXU</span><div class="iConnector"></div></button>
     </div>
-    <div class="hero-behance-wrap">
-      <p class="hero-behance-lead">Or visit</p>
-      <a class="btn btn-o hero-behance-btn" href="https://www.behance.net/nickpat37" target="_blank" rel="noopener noreferrer">Behance portfolio</a>
-    </div>
-
   </div>
   <a class="hero-scroll-hint" href="#philosophy" aria-label="Scroll to Design Philosophy and more sections below"><span class="hero-scroll-hint__label">More below</span><span class="hero-scroll-hint__chevron" aria-hidden="true">↓</span></a>
 </section>
@@ -654,11 +646,11 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <div class="ph">
       <div class="ph-l">
         <div class="pi pi--brand"><img src="assets/images/Project 6_01.png" alt="" width="42" height="42" decoding="async"></div>
-        <div><div class="pname">Weather drink</div><div class="psub">Branding</div></div>
+        <div><div class="pname">Daisy decision</div><div class="psub">Branding</div></div>
       </div>
       <div class="badges"><span class="badge b-n">Branding strategist</span></div>
     </div>
-    <div class="brand-showcase" id="brand-showcase-b6" role="region" aria-label="Weather drink — portfolio images"></div>
+    <div class="brand-showcase" id="brand-showcase-b6" role="region" aria-label="Daisy decision — portfolio images"></div>
     <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('t')">Close ↑</button></div>
   </div>
 </div>
@@ -759,11 +751,11 @@ const GALLERY={
 };
 const BRAND_STACKS={
 b5:["assets/images/Project 5_01.jpg","assets/images/Project 5_02.jpg","assets/images/Project 5_03.gif","assets/images/Project 5_04.jpg","assets/images/Project 5_05.jpg","assets/images/Project 5_06.gif"],
-b6:["assets/images/Project 6_01.png","assets/images/Project 6_02.png","assets/images/Project 6_03.png","assets/images/Project 6_04.png","assets/images/Project 6_05.png","assets/images/Project 6_06.png","assets/images/Project 6_07.png","assets/images/Project 6_08.png","assets/images/Project 6_09.png","assets/images/Project 6_010.png","assets/images/Project 6_011.png","assets/images/Project 6_012.png","assets/images/Project 6_013.png","assets/images/Project 6_014.png"],
+b6:["assets/images/Project 6_01.png"],
 b7:["assets/images/Project 7_02.jpg","assets/images/Project 7_03.jpg","assets/images/Project 7_04.jpg","assets/images/Project 7_05.jpg","assets/images/Project 7_06.jpg","assets/images/Project 7_07.jpg","assets/images/Project 7_08.jpg","assets/images/Project 7_09.jpg","assets/images/Project 7_010.gif","assets/images/Project 7_011.jpg","assets/images/Project 7_012.gif","assets/images/Project 7_013.jpg","assets/images/Project 7_014.jpg","assets/images/Project 7_015.gif","assets/images/Project 7_016.jpg","assets/images/Project 7_017.jpg","assets/images/Project 7_018.jpg"],
 b8:["assets/images/Project 8_02.jpg","assets/images/Project 8_03.jpg","assets/images/Project 8_04.jpg","assets/images/Project 8_05.jpg","assets/images/Project 8_06.gif","assets/images/Project 8_07.jpg","assets/images/Project 8_08.gif","assets/images/Project 8_09.jpg","assets/images/Project 8_010.jpg"]
 };
-const BRAND_ALT={b5:"Sir Larry in financalland",b6:"Weather drink",b7:"Chinese theatre circle",b8:"Chevalerie"};
+const BRAND_ALT={b5:"Sir Larry in financalland",b6:"Daisy decision",b7:"Chinese theatre circle",b8:"Chevalerie"};
 function initBrandShowcases(){Object.keys(BRAND_STACKS).forEach(key=>{const el=document.getElementById("brand-showcase-"+key);if(!el||el.dataset.ready)return;const base=BRAND_ALT[key]||"Portfolio";BRAND_STACKS[key].forEach((src,i)=>{const img=document.createElement("img");img.src=src;img.alt=base+" — "+(i+1);img.loading=i===0?"eager":"lazy";img.decoding="async";el.appendChild(img);});el.dataset.ready="1";});}
 initBrandShowcases();
 
@@ -865,8 +857,7 @@ document.addEventListener("keydown",e=>{if(document.getElementById("modal").clas
 const UX_HERO_THUMB={s:"assets/icons/Project 1.png",f:"assets/icons/Project 2.png",t:"assets/icons/Project 3.png",p:"assets/icons/Project 4.png"};
 const HERO_BY_ROLE={
 ux:{title:'Design that <strong>solves,</strong><br>not just shows.',sub:"Research, systems, and interaction design",p:"Four projects. Four domains. One conviction: the best UX doesn't ask users to adapt, it adapts to them.",order:["s","f","t","p"],labels:{s:"Telomeres",f:"FactWeavers",t:"ONETemasek",p:"PAXU"}},
-brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"Four branding projects — open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Weather drink",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}},
-ctx:{title:'Systems that <strong>carry context,</strong><br>not just content.',sub:"Knowledge design, prompts, and product surfaces",p:"Grounding complex domains so teams — and models — reason with the right evidence, constraints, and mental models.",order:["f","t","s","p"],labels:{s:"Telomeres · geo context",f:"FactWeavers · truth layer",t:"ONETemasek · AI rollout",p:"PAXU · investor UX"}}
+brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"Four branding projects — open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Daisy decision",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}}
 };
 function applyHeroRole(role){
 heroRole=role||"ux";
