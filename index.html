@@ -296,10 +296,10 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       <div class="sc"><div class="sct">Interaction Design</div><div class="stags"><span class="stag">Information Architecture</span><span class="stag">Wireframing</span><span class="stag">Prototyping</span><span class="stag">User Flows</span><span class="stag">Human-AI interaction</span><span class="stag">AI agent interaction</span><span class="stag">AI context engineering</span></div></div>
       <div class="sc"><div class="sct">Design Systems</div><div class="stags"><span class="stag">Component Libraries</span><span class="stag">Atomic Design</span><span class="stag">Figma Variables</span><span class="stag">Accessibility</span></div></div>
       <div class="sc"><div class="sct">Product Strategy</div><div class="stags"><span class="stag">MVP Scoping</span><span class="stag">Feature Prioritization</span><span class="stag">Stakeholder Alignment</span><span class="stag">Rebranding</span></div></div>
-      <div class="sc"><div class="sct">Domain Experience</div><div class="stags"><span class="stag">GovTech / Defence</span><span class="stag">Enterprise SaaS</span><span class="stag">Social Impact</span><span class="stag">Corp Intranet</span><span class="stag">AI Products</span></div></div>
+      <div class="sc"><div class="sct">Domain Experience</div><div class="stags"><span class="stag">Healthcare</span><span class="stag">Enterprise SaaS</span><span class="stag">Social Impact</span><span class="stag">Corp Intranet</span><span class="stag">AI Products</span><span class="stag">B2C commerce</span></div></div>
       <div class="sc"><div class="sct">Collaboration</div><div class="stags"><span class="stag">Cross-functional Teams</span><span class="stag">Dev Handoff</span><span class="stag">Design Lead</span><span class="stag">Facilitation</span></div></div>
       <div class="sc"><div class="sct">Visual Design</div><div class="stags"><span class="stag">High-Fidelity UI</span><span class="stag">Typography Systems</span><span class="stag">Data Visualisation</span><span class="stag">Rebranding</span></div></div>
-      <div class="sc"><div class="sct">Tools</div><div class="stags"><span class="stag">Figma</span><span class="stag">FigJam</span><span class="stag">Miro</span><span class="stag">Maze</span><span class="stag">Notion</span><span class="stag">SharePoint</span><span class="stag">Cursor</span><span class="stag">Claude Code</span><span class="stag">AWS Bedrock</span></div></div>
+      <div class="sc"><div class="sct">Tools</div><div class="stags"><span class="stag">Figma</span><span class="stag">FigJam</span><span class="stag">Miro</span><span class="stag">Maze</span><span class="stag">Cursor</span><span class="stag">Claude Code</span><span class="stag">AWS Bedrock</span><span class="stag">Blender</span><span class="stag">Lovable</span><span class="stag">Replit</span></div></div>
     </div>
   </div>
 </section>
@@ -646,11 +646,11 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <div class="ph">
       <div class="ph-l">
         <div class="pi pi--brand"><img src="assets/images/Project 6_01.png" alt="" width="42" height="42" decoding="async"></div>
-        <div><div class="pname">Daisy decision</div><div class="psub">Branding</div></div>
+        <div><div class="pname">Weather drink</div><div class="psub">Branding</div></div>
       </div>
       <div class="badges"><span class="badge b-n">Branding strategist</span></div>
     </div>
-    <div class="brand-showcase" id="brand-showcase-b6" role="region" aria-label="Daisy decision — portfolio images"></div>
+    <div class="brand-showcase" id="brand-showcase-b6" role="region" aria-label="Weather drink — portfolio images"></div>
     <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('t')">Close ↑</button></div>
   </div>
 </div>
@@ -755,7 +755,7 @@ b6:["assets/images/Project 6_01.png","assets/images/Project 6_02.png","assets/im
 b7:["assets/images/Project 7_02.jpg","assets/images/Project 7_03.jpg","assets/images/Project 7_04.jpg","assets/images/Project 7_05.jpg","assets/images/Project 7_06.jpg","assets/images/Project 7_07.jpg","assets/images/Project 7_08.jpg","assets/images/Project 7_09.jpg","assets/images/Project 7_010.gif","assets/images/Project 7_011.jpg","assets/images/Project 7_012.gif","assets/images/Project 7_013.jpg","assets/images/Project 7_014.jpg","assets/images/Project 7_015.gif","assets/images/Project 7_016.jpg","assets/images/Project 7_017.jpg","assets/images/Project 7_018.jpg"],
 b8:["assets/images/Project 8_02.jpg","assets/images/Project 8_03.jpg","assets/images/Project 8_04.jpg","assets/images/Project 8_05.jpg","assets/images/Project 8_06.gif","assets/images/Project 8_07.jpg","assets/images/Project 8_08.gif","assets/images/Project 8_09.jpg","assets/images/Project 8_010.jpg"]
 };
-const BRAND_ALT={b5:"Sir Larry in financalland",b6:"Daisy decision",b7:"Chinese theatre circle",b8:"Chevalerie"};
+const BRAND_ALT={b5:"Sir Larry in financalland",b6:"Weather drink",b7:"Chinese theatre circle",b8:"Chevalerie"};
 function initBrandShowcases(){Object.keys(BRAND_STACKS).forEach(key=>{const el=document.getElementById("brand-showcase-"+key);if(!el||el.dataset.ready)return;const base=BRAND_ALT[key]||"Portfolio";BRAND_STACKS[key].forEach((src,i)=>{const img=document.createElement("img");img.src=src;img.alt=base+" — "+(i+1);img.loading=i===0?"eager":"lazy";img.decoding="async";el.appendChild(img);});el.dataset.ready="1";});}
 initBrandShowcases();
 
@@ -857,7 +857,7 @@ document.addEventListener("keydown",e=>{if(document.getElementById("modal").clas
 const UX_HERO_THUMB={s:"assets/icons/Project 1.png",f:"assets/icons/Project 2.png",t:"assets/icons/Project 3.png",p:"assets/icons/Project 4.png"};
 const HERO_BY_ROLE={
 ux:{title:'Design that <strong>solves,</strong><br>not just shows.',sub:"Research, systems, and interaction design",p:"Four projects. Four domains. One conviction: the best UX doesn't ask users to adapt, it adapts to them.",order:["s","f","t","p"],labels:{s:"Telomeres",f:"FactWeavers",t:"ONETemasek",p:"PAXU"}},
-brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"Four branding projects — open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Daisy decision",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}}
+brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"Four branding projects — open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Weather drink",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}}
 };
 function applyHeroRole(role){
 heroRole=role||"ux";
