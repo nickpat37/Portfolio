@@ -66,3 +66,13 @@ Images live in `assets/images/` named `Project N_*.jpg` (or `.png`/`.gif` for br
 ## Vercel Config
 
 `vercel.json` holds a single 301 redirect from `/portfolio_rvs.html` to `/`. No other routing configuration needed — Vercel serves `index.html` by default.
+
+## User Preferences
+
+**Read the full file before acting.** `index.html` is a single file — read it completely at the start of any session before making changes. Discovering constraints (overflow, max-width, JS dependencies) reactively mid-task wastes turns.
+
+**Batch independent edits in parallel.** All unrelated CSS or HTML changes should go out as parallel tool calls in a single message, not one-by-one sequentially.
+
+**Clarify ambiguous visual requests before implementing.** If a layout request could mean multiple things (e.g. edge-to-edge vs padded, full-bleed vs contained), ask one targeted question first rather than implement and iterate.
+
+**Don't fetch external sites for design reference.** Common design system knowledge (Apple, Material, etc.) is already known — use it directly without WebFetch.

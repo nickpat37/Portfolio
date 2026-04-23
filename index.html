@@ -62,12 +62,14 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .sdot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.2);animation:breathe 2.5s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 2px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 4px rgba(34,197,94,.12)}}
 .eyebrow{font-size:11px;font-weight:400;letter-spacing:.06em;color:var(--t3);margin-bottom:1.1rem}
-.role-tabs{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px;max-width:min(100%,560px);margin:0 auto 1.1rem;padding:5px;background:var(--s2);border:1px solid var(--bd);border-radius:100px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.role-tab{font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.02em;color:var(--t2);padding:8px 20px;border-radius:100px;border:none;background:transparent;cursor:pointer;transition:background .15s,color .15s;white-space:nowrap;-webkit-tap-highlight-color:transparent}
-.role-tab:hover{color:var(--t1);background:rgba(0,0,0,.05)}
-.role-tab.on{background:var(--t1);color:#fff}
+.role-tabs{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px;width:min(408px,100%);height:50px;margin:0 auto 1.1rem;padding:5px;background:#E5EEFB;border:none;border-radius:100px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.role-tab{font-family:var(--sans);font-size:16px;font-weight:500;letter-spacing:.02em;padding:8px 20px;border-radius:100px;border:none;background:transparent;cursor:pointer;transition:background .15s,color .15s;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.role-tab:not(.on){color:#464c6d;background:transparent}
+.role-tab:not(.on):hover{color:#464c6d;background:transparent}
+.role-tab.on{background:#0033FF;color:#fff}
+.role-tab.on:hover{background:#0033FF;color:#fff}
 .role-tab:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
-#role-tab-ux,#role-tab-brand{width:158px}
+#role-tab-ux,#role-tab-brand{width:190px}
 .hero-h{font-size:clamp(3.2rem,6.8vw,5.8rem);font-weight:200;letter-spacing:-.045em;line-height:1.04;color:var(--t1);margin-bottom:1.2rem}
 .hero-h em{font-style:italic;font-weight:500}
 .hero-h strong{font-weight:500;font-style:italic}
@@ -81,8 +83,8 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .iCard{width:82px;height:82px;border-radius:var(--rxl);display:flex;align-items:center;justify-content:center;box-shadow:var(--shm);border:none;transition:box-shadow .2s;overflow:hidden}
 .iBtn:hover .iCard,.iBtn.on .iCard{box-shadow:var(--shxl)}
 .iCard--proj{background:var(--s)}.iCard--proj img{width:58px;height:58px;object-fit:contain;display:block}
-.iCard.iCard--brand{padding:0;overflow:hidden}
-.iCard.iCard--brand img{width:100%;height:100%;object-fit:cover;display:block}
+.iCard.iCard--proj.iCard--brand{width:132px;height:85px;padding:0;overflow:hidden}
+.iCard.iCard--proj.iCard--brand img{width:100%;height:100%;object-fit:cover;display:block}
 .iLabel{margin-top:11px;font-size:12px;font-weight:400;color:var(--t2);white-space:nowrap;max-width:104px;line-height:1.25;text-align:center}
 .iBtn .iLabel{white-space:normal}
 .iBtn.on .iLabel{color:var(--t1);font-weight:500}
@@ -234,7 +236,7 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 footer{padding:1.25rem 2.5rem;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center}
 footer p{font-size:12px;font-weight:300;color:var(--t3)}
 .rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}.rv.in{opacity:1;transform:none}
-@media(max-width:760px){.insight-grid,.decisions-grid,.ps-il,.cin,.cgrid{grid-template-columns:1fr}.sgrid{grid-template-columns:1fr 1fr}.ci:first-child{border-radius:var(--rl) var(--rl) 0 0}.ci:last-child{border-radius:0 0 var(--rl) var(--rl)}nav{padding:0 1.25rem}.nav-mid{display:none}.hero,.sec,.contact{padding-left:1.25rem;padding-right:1.25rem}.sec{padding-top:5rem;padding-bottom:5rem}.contact{padding-top:5rem;padding-bottom:5rem}.icons-row{gap:1.5rem}.nav-avail-desktop{display:none}.nav-avail-mobile{display:inline}.role-tab{padding:6px 12px;font-size:10.5px}}
+@media(max-width:760px){.insight-grid,.decisions-grid,.ps-il,.cin,.cgrid{grid-template-columns:1fr}.sgrid{grid-template-columns:1fr 1fr}.ci:first-child{border-radius:var(--rl) var(--rl) 0 0}.ci:last-child{border-radius:0 0 var(--rl) var(--rl)}nav{padding:0 1.25rem}.nav-mid{display:none}.hero,.sec,.contact{padding-left:1.25rem;padding-right:1.25rem}.sec{padding-top:5rem;padding-bottom:5rem}.contact{padding-top:5rem;padding-bottom:5rem}.icons-row{gap:1.5rem}.nav-avail-desktop{display:none}.nav-avail-mobile{display:inline}.role-tabs{width:100%;height:auto;min-height:50px}.role-tab{padding:6px 12px;font-size:12px}#role-tab-ux,#role-tab-brand{width:auto;flex:1;min-width:0;text-align:center}}
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .skip-link:focus{position:fixed;left:1rem;top:1rem;z-index:300;width:auto;height:auto;padding:.5rem 1rem;clip:auto;overflow:visible;background:var(--ac);color:#fff;font-size:13px;border-radius:var(--r);text-decoration:none;outline:2px solid #fff;outline-offset:2px}
 a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:center}
@@ -882,8 +884,8 @@ if(!b||!lbl)return;
 const span=b.querySelector(".iLabel");if(span)span.textContent=lbl;
 const img=b.querySelector(".iCard img"),card=b.querySelector(".iCard");
 if(img)img.alt=(lbl.split("·")[0]||lbl).trim();
-if(role==="brand"&&d.thumbs&&d.thumbs[id]){if(card)card.classList.add("iCard--brand");if(img)img.src=d.thumbs[id];}
-else{if(card)card.classList.remove("iCard--brand");if(img)img.src=UX_HERO_THUMB[id];}
+if(role==="brand"&&d.thumbs&&d.thumbs[id]){if(card)card.classList.add("iCard--brand");if(img){img.src=d.thumbs[id];img.setAttribute("width","132");img.setAttribute("height","85");}}
+else{if(card)card.classList.remove("iCard--brand");if(img){img.src=UX_HERO_THUMB[id];img.setAttribute("width","52");img.setAttribute("height","52");}}
 });
 }
 document.querySelectorAll(".role-tab").forEach((btn,_,arr)=>{btn.addEventListener("click",()=>{const role=btn.getAttribute("data-role");if(!role)return;arr.forEach(b=>{b.classList.toggle("on",b===btn);b.setAttribute("aria-selected",b===btn?"true":"false");});if(document.getElementById("case-overlay").classList.contains("open"))closeCaseOverlay();applyHeroRole(role);});});
