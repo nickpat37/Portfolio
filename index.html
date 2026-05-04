@@ -71,6 +71,7 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .role-tab.on{background:transparent;color:#fff}
 .role-tab.on:hover{background:transparent;color:#fff}
 .role-tab:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.dec-enc{opacity:.35}.dec-rev{opacity:1}
 .hero-h{font-size:clamp(3.2rem,6.8vw,5.8rem);font-weight:200;letter-spacing:-.045em;line-height:1.04;color:var(--t1);margin-bottom:1.2rem}
 .hero-h em{font-style:italic;font-weight:500}
 .hero-h strong{font-weight:500;font-style:italic}
@@ -873,12 +874,40 @@ ux:{title:'Design that <strong>solves,</strong><br>not just shows.',sub:"Researc
 brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"Four branding projects — open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Weather drink",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}},
 context:{title:'Context that <strong>grounds</strong> the work.',sub:"Prompts, evals, and human–AI workflows",p:"Four projects where structured context, guardrails, and measurement helped ship reliable experiences — not just demos.",order:["s","f","t","p"],labels:{s:"Telomeres",f:"FactWeavers",t:"ONETemasek",p:"PAXU"}}
 };
-function applyHeroRole(role){
+const _DC='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+';
+let _dcGen=0;
+function decryptHeading(el,finalHTML){
+  const gen=++_dcGen;
+  el.innerHTML=finalHTML;
+  const target=el.querySelector('strong,em');
+  if(!target)return;
+  const finalText=target.textContent;
+  const len=finalText.length;
+  let revealed=0;
+  function render(){
+    let html='';
+    for(let i=0;i<len;i++){
+      const ch=finalText[i];
+      if(ch===' '){html+=' ';continue;}
+      if(i<revealed){html+='<span class="dec-rev">'+ch+'</span>';}
+      else{html+='<span class="dec-enc">'+_DC[Math.floor(Math.random()*_DC.length)]+'</span>';}
+    }
+    target.innerHTML=html;
+  }
+  render();
+  const tick=setInterval(()=>{
+    if(gen!==_dcGen){clearInterval(tick);return;}
+    revealed++;
+    if(revealed>=len){clearInterval(tick);target.textContent=finalText;return;}
+    render();
+  },40);
+}
+function applyHeroRole(role,animate){
 heroRole=role||"ux";
 const d=HERO_BY_ROLE[role];if(!d)return;
 const h=document.getElementById("hero-heading"),sub=document.getElementById("hero-sub"),lead=document.getElementById("hero-lead"),row=document.querySelector(".icons-row");
 if(!h||!lead||!row)return;
-h.innerHTML=d.title;
+if(animate)decryptHeading(h,d.title);else h.innerHTML=d.title;
 if(d.sub){sub.textContent=d.sub;sub.hidden=false;}else{sub.textContent="";sub.hidden=true;}
 lead.textContent=d.p;
 d.order.forEach(id=>{
@@ -893,7 +922,7 @@ else{if(card)card.classList.remove("iCard--brand");if(img){img.src=UX_HERO_THUMB
 });
 }
 function movePill(){const on=document.querySelector(".role-tab.on");const pill=document.querySelector(".tab-pill");if(!on||!pill)return;pill.style.left=on.offsetLeft+"px";pill.style.width=on.offsetWidth+"px";}
-document.querySelectorAll(".role-tab").forEach((btn,_,arr)=>{btn.addEventListener("click",()=>{const role=btn.getAttribute("data-role");if(!role)return;arr.forEach(b=>{b.classList.toggle("on",b===btn);b.setAttribute("aria-selected",b===btn?"true":"false");});movePill();if(document.getElementById("case-overlay").classList.contains("open"))closeCaseOverlay();applyHeroRole(role);});});
+document.querySelectorAll(".role-tab").forEach((btn,_,arr)=>{btn.addEventListener("click",()=>{const role=btn.getAttribute("data-role");if(!role)return;arr.forEach(b=>{b.classList.toggle("on",b===btn);b.setAttribute("aria-selected",b===btn?"true":"false");});movePill();if(document.getElementById("case-overlay").classList.contains("open"))closeCaseOverlay();applyHeroRole(role,true);});});
 applyHeroRole("ux");
 movePill();
 window.addEventListener("resize",movePill);
