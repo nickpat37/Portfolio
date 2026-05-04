@@ -62,7 +62,7 @@ nav .nav-r>a.btn[hidden]{display:none!important}
 .sdot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.2);animation:breathe 2.5s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 2px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 4px rgba(34,197,94,.12)}}
 .eyebrow{font-size:11px;font-weight:400;letter-spacing:.06em;color:var(--t3);margin-bottom:1.1rem}
-.role-tabs{position:relative;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px;width:min(620px,100%);min-height:50px;margin:0 auto 1.1rem;padding:5px;background:#E5EEFB;border:none;border-radius:100px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.role-tabs{position:relative;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px;width:min(408px,100%);min-height:50px;margin:0 auto 1.1rem;padding:5px;background:#E5EEFB;border:none;border-radius:100px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .tab-pill{position:absolute;top:5px;bottom:5px;border-radius:100px;background:#0033FF;pointer-events:none;z-index:0;transition:left .3s cubic-bezier(.4,0,.2,1),width .3s cubic-bezier(.4,0,.2,1)}
 .role-tabs .role-tab{flex:1;min-width:0;text-align:center}
 .role-tab{position:relative;z-index:1;font-family:var(--sans);font-size:16px;font-weight:500;letter-spacing:.02em;padding:8px 14px;border-radius:100px;border:none;background:transparent;cursor:pointer;transition:color .15s;white-space:nowrap;-webkit-tap-highlight-color:transparent}
@@ -272,7 +272,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       <div class="tab-pill" aria-hidden="true"></div>
       <button type="button" class="role-tab on" role="tab" aria-selected="true" id="role-tab-ux" data-role="ux">UX design</button>
       <button type="button" class="role-tab" role="tab" aria-selected="false" id="role-tab-brand" data-role="brand">Branding strategist</button>
-      <button type="button" class="role-tab" role="tab" aria-selected="false" id="role-tab-context" data-role="context">Context engineering</button>
+      <button type="button" class="role-tab" role="tab" aria-selected="false" id="role-tab-context" data-role="context" hidden>Context engineering</button>
     </div>
     <h1 class="hero-h" id="hero-heading">Design that <strong>solves,</strong><br>not just shows.</h1>
     <p class="hero-sub" id="hero-sub" hidden></p>
@@ -291,12 +291,12 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
 <section class="sec" id="philosophy" aria-labelledby="philosophy-heading">
   <div class="sec-in">
     <p class="kicker">Design Philosophy</p>
-    <h2 class="sh" id="philosophy-heading">Complexity is not an excuse<br>for <strong>bad UX.</strong></h2>
-    <p class="slead">I work at the intersection of dense systems and human clarity - translating geospatial data, enterprise analytics, corporate intranets, and high-stakes safety tools into interfaces people actually trust.</p>
+    <h2 class="sh" id="philosophy-heading">Complexity is not an excuse<br>for <strong>unclear craft.</strong></h2>
+    <p class="slead">I work where product UX meets brand systems: interfaces people can actually use under pressure, and identities that signal intent before anyone reads a word. The problems stay dense in geospatial insight, enterprise analytics, corporate intranets, high stakes safety tools, and brands that need to read clearly at a glance.</p>
     <div class="cgrid rv">
-      <div class="ci"><div class="cn">01</div><div class="ct">Radical Clarity</div><div class="cd">Simplicity isn't removing things - it's knowing which things matter. Entering a domain as a stranger is the methodology, not the handicap.</div></div>
-      <div class="ci"><div class="cn">02</div><div class="ct">Constraints as Briefs</div><div class="cd">Fixed architectures, tight timelines, and legacy systems are not obstacles - they're the frame that forces more focused, implementable decisions.</div></div>
-      <div class="ci"><div class="cn">03</div><div class="ct">Empathy as Method</div><div class="cd">Research is a posture, not a phase. Every project starts by becoming the user - experiencing their confusion, their cognitive load, and their risk firsthand.</div></div>
+      <div class="ci"><div class="cn">01</div><div class="ct">Radical Clarity</div><div class="cd">Simplicity is not stripping things away; it is deciding what must read first. That applies to navigation and information architecture, verbal and visual identity, and the surface choices that make a whole experience feel coherent.</div></div>
+      <div class="ci"><div class="cn">02</div><div class="ct">Constraints as Briefs</div><div class="cd">Timelines, legacy stacks, regulatory reality, and brand guardrails are not obstacles; they are the brief. Constraints force trade offs you can explain, defend, and ship.</div></div>
+      <div class="ci"><div class="cn">03</div><div class="ct">Empathy as Method</div><div class="cd">Research is a posture, not a phase, whether you are designing for end users or aligning skeptical stakeholders. I start from real confusion, load, and risk, then iterate until the path forward is obvious and measurable after launch.</div></div>
     </div>
   </div>
 </section>
@@ -651,7 +651,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       </div>
       <div class="badges"><span class="badge b-n">Branding strategist</span></div>
     </div>
-    <div class="brand-showcase" id="brand-showcase-b5" role="region" aria-label="Sir Larry in financalland — portfolio images"></div>
+    <div class="brand-showcase" id="brand-showcase-b5" role="region" aria-label="Sir Larry in financalland: portfolio images"></div>
     <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('p')">Close ↑</button></div>
   </div>
 </div>
@@ -660,11 +660,11 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
     <div class="ph">
       <div class="ph-l">
         <div class="pi pi--brand"><img src="assets/images/Project 6_01.png" alt="" width="48" height="48" decoding="async"></div>
-        <div><div class="pname">Weather drink</div><div class="psub">Branding</div></div>
+        <div><div class="pname">Daisy Decision</div><div class="psub">Branding</div></div>
       </div>
       <div class="badges"><span class="badge b-n">Branding strategist</span></div>
     </div>
-    <div class="brand-showcase" id="brand-showcase-b6" role="region" aria-label="Weather drink — portfolio images"></div>
+    <div class="brand-showcase" id="brand-showcase-b6" role="region" aria-label="Daisy Decision: portfolio images"></div>
     <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('t')">Close ↑</button></div>
   </div>
 </div>
@@ -677,7 +677,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       </div>
       <div class="badges"><span class="badge b-n">Branding strategist</span></div>
     </div>
-    <div class="brand-showcase" id="brand-showcase-b7" role="region" aria-label="Chinese theatre circle — portfolio images"></div>
+    <div class="brand-showcase" id="brand-showcase-b7" role="region" aria-label="Chinese theatre circle: portfolio images"></div>
     <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('f')">Close ↑</button></div>
   </div>
 </div>
@@ -690,7 +690,7 @@ a.npill{text-decoration:none;color:inherit;display:inline-flex;align-items:cente
       </div>
       <div class="badges"><span class="badge b-n">Branding strategist</span></div>
     </div>
-    <div class="brand-showcase" id="brand-showcase-b8" role="region" aria-label="Chevalerie — portfolio images"></div>
+    <div class="brand-showcase" id="brand-showcase-b8" role="region" aria-label="Chevalerie: portfolio images"></div>
     <div class="pf"><button type="button" class="btn btn-o" onclick="toggle('s')">Close ↑</button></div>
   </div>
 </div>
@@ -721,14 +721,14 @@ function renderMetrics(pid){const el=document.getElementById("metrics-"+pid);if(
 
 let active=null;const all=["s","f","t","p"];const ALL_PANEL_IDS=["s","f","t","p","b5","b6","b7","b8"];let heroRole="ux";
 let phRestoreParent=null,phRestoreNext=null;
-function getPanelId(heroId){if(heroRole==="brand"){const m={p:"b5",t:"b6",f:"b7",s:"b8"};return m[heroId]||heroId;}return heroId;}
+function getPanelId(heroId){if(heroRole==="brand"){const m={p:"b5",t:"b6",f:"b7",s:"b8"};return m[heroId]||heroId;}if(heroRole==="context"){if(heroId==="t")return"b6";return heroId;}return heroId;}
 function syncCaseTopPad(){const h=document.getElementById("nav")?.offsetHeight||56;document.documentElement.style.setProperty("--case-top-pad",h+"px");}
 function unmountPhFromNav(){const slot=document.getElementById("nav-project");const ph=slot&&slot.querySelector(".ph");if(ph&&phRestoreParent){ph.classList.remove("ph--nav");phRestoreParent.insertBefore(ph,phRestoreNext)}phRestoreParent=null;phRestoreNext=null;if(slot){slot.innerHTML="";slot.hidden=true}document.getElementById("nav").classList.remove("case-mode");document.body.classList.remove("case-study-open");document.documentElement.style.removeProperty("--case-top-pad");const nb=document.getElementById("nav-case-close");if(nb)nb.hidden=true;}
 function mountPhToNav(heroId){unmountPhFromNav();const pid=getPanelId(heroId);const panel=document.getElementById("panel-"+pid);const ph=panel&&panel.querySelector(".ph");const slot=document.getElementById("nav-project");if(!ph||!slot)return;phRestoreParent=ph.parentNode;phRestoreNext=ph.nextSibling;ph.classList.add("ph--nav");slot.appendChild(ph);slot.hidden=false;document.getElementById("nav").classList.add("case-mode");document.body.classList.add("case-study-open");const nb=document.getElementById("nav-case-close");if(nb)nb.hidden=false;requestAnimationFrame(()=>{syncCaseTopPad();});}
 function openCaseOverlay(){const ov=document.getElementById("case-overlay");ov.classList.add("open");ov.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";}
 function closeCaseOverlay(){unmountPhFromNav();const ov=document.getElementById("case-overlay");ov.classList.remove("open");ov.setAttribute("aria-hidden","true");document.body.style.overflow="";ALL_PANEL_IDS.forEach(pid=>{const el=document.getElementById("panel-"+pid);if(el)el.classList.remove("on");});all.forEach(i=>{const ib=document.getElementById("ib-"+i);if(ib)ib.classList.remove("on");});active=null;}
 window.addEventListener("resize",()=>{if(document.body.classList.contains("case-study-open"))syncCaseTopPad();},{passive:true});
-function toggle(id){const ov=document.getElementById("case-overlay");const open=ov.classList.contains("open");if(open&&active===id){closeCaseOverlay();return;}if(!open)openCaseOverlay();const pid=getPanelId(id);all.forEach(i=>{const p=document.getElementById("panel-"+getPanelId(i));if(p)p.classList.remove("on");document.getElementById("ib-"+i).classList.remove("on");});document.getElementById("panel-"+pid).classList.add("on");document.getElementById("ib-"+id).classList.add("on");if(heroRole!=="brand")renderMetrics(id);active=id;mountPhToNav(id);const sc=document.getElementById("case-overlay-scroll");if(sc)sc.scrollTop=0;}
+function toggle(id){const ov=document.getElementById("case-overlay");const open=ov.classList.contains("open");if(open&&active===id){closeCaseOverlay();return;}if(!open)openCaseOverlay();const pid=getPanelId(id);all.forEach(i=>{const p=document.getElementById("panel-"+getPanelId(i));if(p)p.classList.remove("on");document.getElementById("ib-"+i).classList.remove("on");});document.getElementById("panel-"+pid).classList.add("on");document.getElementById("ib-"+id).classList.add("on");if(heroRole==="ux")renderMetrics(id);active=id;mountPhToNav(id);const sc=document.getElementById("case-overlay-scroll");if(sc)sc.scrollTop=0;}
 document.getElementById("nav-case-close").addEventListener("click",closeCaseOverlay);
 window.addEventListener("scroll",()=>{document.getElementById("nav").classList.toggle("up",scrollY>8);},{passive:true});
 const rvEls=document.querySelectorAll(".rv");const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");obs.unobserve(e.target);}}),{threshold:.1});rvEls.forEach(el=>obs.observe(el));
@@ -769,8 +769,8 @@ b6:["assets/images/Project 6_01.png","assets/images/Project 6_02.png","assets/im
 b7:["assets/images/Project 7_02.jpg","assets/images/Project 7_03.jpg","assets/images/Project 7_04.jpg","assets/images/Project 7_05.jpg","assets/images/Project 7_06.jpg","assets/images/Project 7_07.jpg","assets/images/Project 7_08.jpg","assets/images/Project 7_09.jpg","assets/images/Project 7_010.gif","assets/images/Project 7_011.jpg","assets/images/Project 7_012.gif","assets/images/Project 7_013.jpg","assets/images/Project 7_014.jpg","assets/images/Project 7_015.gif","assets/images/Project 7_016.jpg","assets/images/Project 7_017.jpg","assets/images/Project 7_018.jpg"],
 b8:["assets/images/Project 8_02.jpg","assets/images/Project 8_03.jpg","assets/images/Project 8_04.jpg","assets/images/Project 8_05.jpg","assets/images/Project 8_06.gif","assets/images/Project 8_07.jpg","assets/images/Project 8_08.gif","assets/images/Project 8_09.jpg","assets/images/Project 8_010.jpg"]
 };
-const BRAND_ALT={b5:"Sir Larry in financalland",b6:"Weather drink",b7:"Chinese theatre circle",b8:"Chevalerie"};
-function initBrandShowcases(){Object.keys(BRAND_STACKS).forEach(key=>{const el=document.getElementById("brand-showcase-"+key);if(!el||el.dataset.ready)return;const base=BRAND_ALT[key]||"Portfolio";BRAND_STACKS[key].forEach((src,i)=>{const img=document.createElement("img");img.src=src;img.alt=base+" — "+(i+1);img.loading=i===0?"eager":"lazy";img.decoding="async";el.appendChild(img);});el.dataset.ready="1";});}
+const BRAND_ALT={b5:"Sir Larry in financalland",b6:"Daisy Decision",b7:"Chinese theatre circle",b8:"Chevalerie"};
+function initBrandShowcases(){Object.keys(BRAND_STACKS).forEach(key=>{const el=document.getElementById("brand-showcase-"+key);if(!el||el.dataset.ready)return;const base=BRAND_ALT[key]||"Portfolio";BRAND_STACKS[key].forEach((src,i)=>{const img=document.createElement("img");img.src=src;img.alt=base+": "+(i+1);img.loading=i===0?"eager":"lazy";img.decoding="async";el.appendChild(img);});el.dataset.ready="1";});}
 initBrandShowcases();
 
 function initCaseCarousel(rootId,pid){
@@ -871,8 +871,8 @@ document.addEventListener("keydown",e=>{if(document.getElementById("modal").clas
 const UX_HERO_THUMB={s:"assets/icons/Project 1.png",f:"assets/icons/Project 2.png",t:"assets/icons/Project 3.png",p:"assets/icons/Project 4.png"};
 const HERO_BY_ROLE={
 ux:{title:'Design that <strong>solves,</strong><br>not just shows.',sub:"Research, systems, and interaction design",p:"Four projects. Four domains. One conviction: the best UX doesn't ask users to adapt, it adapts to them.",order:["s","f","t","p"],labels:{s:"Telomeres",f:"FactWeavers",t:"ONETemasek",p:"PAXU"}},
-brand:{title:'Brands that <strong>signal clarity,</strong><br>not just noise.',sub:"Narrative, systems, and visual identity",p:"Four branding projects — open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Weather drink",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}},
-context:{title:'Context that <strong>grounds</strong> the work.',sub:"Prompts, evals, and human–AI workflows",p:"Four projects where structured context, guardrails, and measurement helped ship reliable experiences — not just demos.",order:["s","f","t","p"],labels:{s:"Telomeres",f:"FactWeavers",t:"ONETemasek",p:"PAXU"}}
+brand:{title:'<strong>Tell stories</strong> brands<br>with no words.',sub:"Narrative, systems, and visual identity",p:"Four branding projects: open each case to scroll the full visual story.",order:["p","t","f","s"],labels:{p:"Sir Larry in financalland",t:"Daisy Decision",f:"Chinese theatre circle",s:"Chevalerie"},thumbs:{p:"assets/images/Project 5_01.jpg",t:"assets/images/Project 6_01.png",f:"assets/images/Project 7_02.jpg",s:"assets/images/Project 8_02.jpg"}},
+context:{title:'Design thinking,<br><strong>engineering</strong> output.',sub:"Prompts, evals, and human-AI workflows",p:"One case study about Daisy Decision: structured context, guardrails, and measurement so the experience stays reliable after launch.",order:["t"],labels:{t:"Daisy decision"},thumbs:{t:"assets/images/Project 6_01.png"}}
 };
 const _DC='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+';
 let _dcGen=0;
@@ -917,9 +917,11 @@ if(!b||!lbl)return;
 const span=b.querySelector(".iLabel");if(span)span.textContent=lbl;
 const img=b.querySelector(".iCard img"),card=b.querySelector(".iCard");
 if(img)img.alt=(lbl.split("·")[0]||lbl).trim();
-if(role==="brand"&&d.thumbs&&d.thumbs[id]){if(card)card.classList.add("iCard--brand");if(img){img.src=d.thumbs[id];img.setAttribute("width","132");img.setAttribute("height","85");}}
+if((role==="brand"||role==="context")&&d.thumbs&&d.thumbs[id]){if(card)card.classList.add("iCard--brand");if(img){img.src=d.thumbs[id];img.setAttribute("width","132");img.setAttribute("height","85");}}
 else{if(card)card.classList.remove("iCard--brand");if(img){img.src=UX_HERO_THUMB[id];img.setAttribute("width","52");img.setAttribute("height","52");}}
 });
+const orderSet=new Set(d.order);
+all.forEach(hid=>{const btn=document.getElementById("ib-"+hid);if(btn)btn.hidden=!orderSet.has(hid);});
 }
 function movePill(){const on=document.querySelector(".role-tab.on");const pill=document.querySelector(".tab-pill");if(!on||!pill)return;pill.style.left=on.offsetLeft+"px";pill.style.width=on.offsetWidth+"px";}
 document.querySelectorAll(".role-tab").forEach((btn,_,arr)=>{btn.addEventListener("click",()=>{const role=btn.getAttribute("data-role");if(!role)return;arr.forEach(b=>{b.classList.toggle("on",b===btn);b.setAttribute("aria-selected",b===btn?"true":"false");});movePill();if(document.getElementById("case-overlay").classList.contains("open"))closeCaseOverlay();applyHeroRole(role,true);});});
